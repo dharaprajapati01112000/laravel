@@ -12,23 +12,23 @@
 </head>
 
 <body>
-    <form method="post" action="{{$url('/')}}/register">
+    <form method="post" action="{{$url}}">
         @csrf
         <div class="container">
-            <h1 class="text-center">Form</h1>
+            <h1 class="text-center">{{$title}}</h1>
             <div class="form-group">
               <label for="">Name</label>
-              <input type="text" name="name" id="" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="text" name="name" id="" value="@if(!empty($student)) {{$student->name}} @endif" class="form-control" placeholder="" aria-describedby="helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
             </div>
             <div class="form-group">
               <label for="">Email</label>
-              <input type="email" name="email" id="" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="email" name="email" id="" value="@if(!empty($student)) {{$student->email}}  @endif" class="form-control" placeholder="" aria-describedby="helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
             </div>
             <div class="form-group">
               <label for="">Password</label>
-              <input type="password" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId">
+              <input type="password" name="password" id="" value="" class="form-control" placeholder="" aria-describedby="helpId">
               <!-- <small id="helpId" class="text-muted">Help text</small> -->
             </div>
             <button class="btn btn-primary">Submit</button>

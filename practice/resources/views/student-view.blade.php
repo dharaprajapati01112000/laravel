@@ -27,7 +27,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($students as $keys)
+                @foreach ($student as $keys)
                 <tr>
                     <td>{{$keys['student_id']}}</td>
                     <td>{{$keys['name']}}</td>

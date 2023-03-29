@@ -23,7 +23,7 @@ Route::post('/register',[formcontroller::class,'register']);
 // Route::get('/form',[formcontroller::class,'index']);
 Route::get('/form/delete/{id}',[formcontroller::class,'delete'])->name('student.delete');
 Route::get('/form/edit/{id}',[formcontroller::class,'edit'])->name('student.edit');
-Route::get('/form/update/{id}',[formcontroller::class,'update'])->name('student.update');
+Route::post('/form/update/{id}',[formcontroller::class,'update'])->name('student.update');
 Route::post('/form',[formcontroller::class,'register']);
 Route::get('/form',[formcontroller::class,'view']);
 
