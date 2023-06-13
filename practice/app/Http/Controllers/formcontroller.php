@@ -47,7 +47,7 @@ class formcontroller extends Controller
         // echo "<pre>";
         // print_r($st);
     //   Student::find($id)->delete();
-    
+
     //   return redirect()->back();
     }
     public function edit($id) {
